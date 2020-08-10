@@ -15,32 +15,96 @@ export default {
     },
     data() {
         return {
-
+            basic:'10000',//基础攻击
+            Mweapon:[],//方阵武器
+            Wweapon:[],//老王武器
+            EXweapon:[],//特殊武器
+            propStone:'1.5',//属性加护
+            Mstone:'1.4',//方阵加护
+            Wweapon:'1.4',//老王加护
+            other:''//其他加成
         }
     },
     mounted() {
-
+        
 
         var ctx2 = document.getElementById("myChart2");
 
         var myChart2 = new Chart(ctx2, {
-            type: "radar",
+           	type: 'bar',
             data: {
-                labels: ["EX", "方阵", "老王", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-                datasets: [
-                    {
-                        label: "test1",
-                        backgroundColor: "rgba(225,10,10,0.3)",
-                        borderColor: "rgba(225,103,110,1)",
-                        borderWidth: 1,
-                        pointStrokeColor: "#fff",
-                        pointStyle: "crossRot",
-                        data: [65, 59, 0, 81, 56, 10, 40, 22, 32, 54, 10, 30],
-                        cubicInterpolationMode: "monotone",
-                        spanGaps: "false",
-                        fill: "false"
-                    }
-                ]
+                labels: ["全方阵", "方阵加老王", "方阵加老王加特殊", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+                datasets: [{
+                    label: 'Dataset 1',
+                    backgroundColor: window.chartColors.red,
+                    stack: 'Stack 0',
+                    data: [
+                     this.basic,
+                     this.basic,
+                     this.basic,
+                     this.basic,
+                     this.basic,
+                     this.basic,
+                     this.basic,
+                     this.basic,
+                    ]
+                },{
+                    label: 'Dataset 1',
+                    backgroundColor: window.chartColors.red,
+                    stack: 'Stack 0',
+                    data: [
+                     this.basic,
+                     this.basic,
+                     this.basic,
+                     this.basic,
+                     this.basic,
+                     this.basic,
+                     this.basic,
+                     this.basic,
+                    ]
+                },{
+                    label: 'Dataset 1',
+                    backgroundColor: window.chartColors.red,
+                    stack: 'Stack 0',
+                    data: [
+                     this.basic,
+                     this.basic,
+                     this.basic,
+                     this.basic,
+                     this.basic,
+                     this.basic,
+                     this.basic,
+                     this.basic,
+                    ]
+                },{
+                    label: 'Dataset 1',
+                    backgroundColor: window.chartColors.red,
+                    stack: 'Stack 0',
+                    data: [
+                     this.basic,
+                     this.basic,
+                     this.basic,
+                     this.basic,
+                     this.basic,
+                     this.basic,
+                     this.basic,
+                     this.basic,
+                    ]
+                },{
+                    label: 'Dataset 1',
+                    backgroundColor: window.chartColors.red,
+                    stack: 'Stack 0',
+                    data: [
+                     this.basic,
+                     this.basic,
+                     this.basic,
+                     this.basic,
+                     this.basic,
+                     this.basic,
+                     this.basic,
+                     this.basic,
+                    ]
+                }]
             },
             options: {
                 
